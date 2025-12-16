@@ -1,0 +1,161 @@
+# ------------------------------------------------------------
+# Secrets / env files (prevent accidental leaks)
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# Common secret file patterns
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+*.crt
+*.der
+*.jks
+*.keystore
+*.mobileprovision
+*.provisionprofile
+
+# Local AWS/CLI credentials (never commit)
+.aws/
+
+# ------------------------------------------------------------
+# Terraform (state, plans, local overrides)
+# ------------------------------------------------------------
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Plan files
+*.tfplan
+
+# Sensitive generated outputs
+**/terraform.tfstate.d/
+
+# ------------------------------------------------------------
+# Node / TypeScript / JavaScript
+# ------------------------------------------------------------
+node_modules/
+**/node_modules/
+
+# Build outputs
+/dist/
+**/dist/
+/build/
+**/build/
+/out/
+**/out/
+/.next/
+**/.next/
+
+# TS build info
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Coverage
+coverage/
+**/coverage/
+.nyc_output/
+
+# ------------------------------------------------------------
+# Expo / React Native
+# ------------------------------------------------------------
+.expo/
+**/.expo/
+
+# Expo web build output
+web-build/
+**/web-build/
+
+# EAS / Expo local state
+.eas/
+**/.eas/
+
+# Metro / React Native
+.metro-health-check*
+
+# React Native / mobile build artifacts
+android/.gradle/
+android/build/
+android/app/build/
+
+ios/build/
+
+# CocoaPods
+ios/Pods/
+**/ios/Pods/
+
+# Xcode derived data and user settings
+DerivedData/
+*.xcworkspace
+!*.xcworkspace/contents.xcworkspacedata
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# ------------------------------------------------------------
+# Testing artifacts
+# ------------------------------------------------------------
+.jest-cache/
+
+# ------------------------------------------------------------
+# OS / editor junk
+# ------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# JetBrains
+.idea/
+
+# Vim
+*.swp
+*.swo
+
+# ------------------------------------------------------------
+# Repo-specific: avoid committing local DBs and caches
+# ------------------------------------------------------------
+*.sqlite
+*.sqlite3
+
+# ------------------------------------------------------------
+# Keep lockfiles (do NOT ignore)
+# ------------------------------------------------------------
+# pnpm-lock.yaml
+# package-lock.json
+# yarn.lock

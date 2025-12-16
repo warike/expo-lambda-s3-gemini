@@ -1,0 +1,6 @@
+onlyBuiltDependencies:
+  - '@clerk/shared'
+  - aws-sdk
+  - esbuild
+  - protobufjs
+  - unrs-resolver

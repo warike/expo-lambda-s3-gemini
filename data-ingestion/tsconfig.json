@@ -1,0 +1,29 @@
+{
+  // Backend-focused configuration targeting ES2022 with bundler resolution
+  "compilerOptions": {
+    // Set the JavaScript language version for emitted JavaScript and include compatible library declarations.
+    "target": "ES2022",
+    // Specify what module code is generated.
+    "module": "ES2022",
+    // Specify how TypeScript looks up a file from a given module specifier.
+    "moduleResolution": "bundler",
+    // Emit additional JavaScript to ease support for importing CommonJS modules.
+    "esModuleInterop": true,
+    // Ensure that casing is correct in imports.
+    "forceConsistentCasingInFileNames": true,
+    // Enable all strict type-checking options.
+    "strict": true,
+    // Skip type checking all .d.ts files.
+    "skipLibCheck": true,
+    // Specify an output folder for all emitted files.
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*" // Specifies an array of filenames or patterns to include in the program.
+  ],
+  "exclude": [
+    "node_modules", // Exclude node_modules directory.
+    "dist", // Exclude the output directory.
+    ".mastra" // Exclude Mastra internal files.
+  ]
+}
